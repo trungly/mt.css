@@ -1,0 +1,126 @@
+/* MINITHEMATIQ: MAIN                 */
+/* Mini CSS Sass Framework, v0.2.0    */
+/* Peter Morawiec, Open Source (MIT)  */
+
+// --- COMMON MIXINS ---
+
+@mixin transition( $time ) {
+    transition: $time;
+    -ms-transition: $time;
+    -moz-transition: $time;
+    -webkit-transition: $time;
+}
+
+@mixin border-in( $color ) {
+    border-radius: $mt-radius;
+    border: 1px solid $color;
+    border-top: 2px solid $color;
+    border-left: 2px solid $color;
+}
+
+@mixin border-out( $color ) {
+    border-radius: $mt-radius;
+    border: 1px solid $color;
+    border-bottom: 2px solid $color;
+    border-right: 2px solid $color;
+}
+
+// --- PARTIAL IMPORTS ---
+
+@import "mt-theme-vars";    // required
+@import "mt-grid";
+@import "mt-decorators";
+@import "mt-buttons";
+@import "mt-helpers";
+
+// --- MAIN STYLING ---
+
+div, label, input, textarea, p, a, li, img, table {
+    box-sizing: border-box;
+}
+
+.mt-h1, h1, h1 a,
+.mt-h2, h2, h2 a,
+.mt-h3, h3, h3 a,
+.mt-h4, h4, h4 a,
+.mt-p, p, a,
+body, div, label, input, textarea, td {
+    line-height: $mt-leading;
+}
+
+.mt-h1, h1, h1 a,
+.mt-h2, h2, h2 a,
+.mt-h3, h3, h3 a,
+.mt-h4, h4, h4 a {
+    font-family: $mt-font-headers;
+    font-weight: bold;
+}
+
+.mt-p, body, label, input, textarea {
+    font-family: $mt-font;
+}
+
+.mt-h3, h3, h3 a,
+.mt-h4, h4, h4 a {
+    color: $mt-color-accent;
+}
+
+.mt-h1, h1, h1 a { font-size: $mt-font-size-xxl; }
+.mt-h2, h2, h2 a { font-size: $mt-font-size-xl; }
+.mt-h3, h3, h3 a { font-size: $mt-font-size-lg; }
+.mt-h4, h4, h4 a { font-size: $mt-font-size-md; }
+
+.mt-p, .mt-script, body { font-size: $mt-font-size-p; }
+.mt-p, body             { color: $mt-color-fg; }
+.mt-script              { color: $mt-color-script; }
+
+.mt-small, small { font-size: $mt-font-size-sm; }
+
+.mt-code, pre, code {
+    color: $mt-color-code;
+    font-family: $mt-font-code;
+    font-size: $mt-font-size-code;
+}
+
+a {
+    color: $mt-color-action;
+    &:hover  { color: $mt-color-action-hover; }
+    &:active { color: $mt-color-action-active; }
+}
+
+body { background-color: $mt-color-bg; }
+
+
+// --- RESPONSIVE FONT SIZE SCALING ---
+
+@media screen and ( max-width: $mt-media-med ) {
+    .mt-h1, h1, h1 a        { font-size: $mt-font-size-xxl * $mt-med-font-scale; }
+    .mt-h2, h2, h2 a        { font-size: $mt-font-size-xl  * $mt-med-font-scale; }
+    .mt-h3, h3, h3 a        { font-size: $mt-font-size-lg  * $mt-med-font-scale; }
+    .mt-h4, h4, h4 a        { font-size: $mt-font-size-md  * $mt-med-font-scale; }
+    .mt-p, .mt-script, body { font-size: $mt-font-size-p   * $mt-med-font-scale; }
+    .mt-small, small        { font-size: $mt-font-size-sm  * $mt-med-font-scale; }
+    .mt-code, pre, code     { font-size: $mt-font-size-code * $mt-med-font-scale; }
+}
+
+@media screen and ( max-width: $mt-media-min ) {
+    .mt-h1, h1, h1 a        { font-size: $mt-font-size-xxl * $mt-min-font-scale; }
+    .mt-h2, h2, h2 a        { font-size: $mt-font-size-xl  * $mt-min-font-scale; }
+    .mt-h3, h3, h3 a        { font-size: $mt-font-size-lg  * $mt-min-font-scale; }
+    .mt-h4, h4, h4 a        { font-size: $mt-font-size-md  * $mt-min-font-scale; }
+    .mt-p, .mt-script, body { font-size: $mt-font-size-p   * $mt-min-font-scale; }
+    .mt-small, small        { font-size: $mt-font-size-sm  * $mt-min-font-scale; }
+    .mt-code, pre, code     { font-size: $mt-font-size-code * $mt-min-font-scale; }
+}
+
+// --- PALETTE VARIANTS ---
+
+.mt-palette-accent {
+    color: $mt-color-bg;
+    background-color: $mt-color-accent;
+}
+
+.mt-palette-flip {
+    color: $mt-color-bg;
+    background-color: $mt-color-fg;
+}

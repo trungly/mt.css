@@ -1,0 +1,48 @@
+/* MINITHEMATIQ: BUTTONS              */
+
+@mixin button {
+    display: inline-block;
+    text-decoration: none;
+    font-family: $mt-font-buttons;
+    padding: $mt-gutter/6 $mt-gutter/2;
+    user-select: none;
+    @include transition( $mt-transition-time-ui );
+
+    &.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}
+
+.mt-button {
+    @include button;
+    color: $mt-color-bg;
+    background-color: $mt-color-action;
+    @include border-out( $mt-color-action-active );
+
+    &:hover {
+        color: $mt-color-bg;
+        background-color: $mt-color-action-hover;
+    }
+
+    &:active, &.active {
+        background-color: $mt-color-action-active;
+        @include border-out( $mt-color-action );
+    }
+}
+
+.mt-button-subtle {
+    @include button;
+    @include border-out( $mt-color-action );
+
+    &:hover {
+        color: $mt-color-bg;
+        background-color: $mt-color-action-hover;
+    }
+
+    &:active, &.active {
+        color: $mt-color-action-active;
+        background-color: transparent;
+        @include border-in( $mt-color-action-active );
+    }
+}

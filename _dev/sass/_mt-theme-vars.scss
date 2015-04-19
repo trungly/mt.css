@@ -1,0 +1,67 @@
+/* MINITHEMATIQ: THEME VARS           */
+
+$mt-wrapper-max-width: 	    1200px;                           // outer wrapper max width
+
+$mt-media-med:         	    720px;                            // mt-med threshold (tablets)
+$mt-media-min:         	    480px;                            // mt-min threshold (phones)
+
+$mt-radius:                 4px;                              // corner radius of frames, wells, buttons
+
+$mt-transition-time-ui:     0.25s;
+
+// --- TYPOGRAPHY ---
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Play);
+
+$mt-font:			        'Roboto Slab', serif;
+$mt-font-weight-light:      100;
+$mt-font-weight-normal:     300;
+$mt-font-weight-bold:       700;
+
+$mt-font-headers:		    'Play', sans-serif;
+$mt-font-buttons:		    'Play', sans-serif;
+$mt-font-script:		    'Play', sans-serif;
+$mt-font-code:		        'Courier New', Courier, monospace; // for pre, code
+
+
+// --- SIZING & SPACING ---
+
+$mt-base-size:              18px;                              // main sizing unit
+
+$mt-margin:                 $mt-base-size * 0.8;               // main vertical margin unit
+$mt-gutter:            	    $mt-base-size * 1.6;               // main horizonal padding unit (grid, frame, well)
+$mt-leading:                1.4;                               // main line height setting
+
+$mt-font-size-p:            $mt-base-size * 1;                 // size of default text, <p>
+$mt-font-size-code:         $mt-base-size * 0.9;
+
+$mt-font-size-xxl:		    $mt-base-size * 2.5;               // <h1>
+$mt-font-size-xl:		    $mt-base-size * 2;                 // <h2>
+$mt-font-size-lg:		    $mt-base-size * 1.5;               // <h3>
+$mt-font-size-md:		    $mt-base-size * 1.25;              // <h4>
+$mt-font-size-sm:         	$mt-base-size * 0.8;               // <small>
+
+$mt-med-font-scale:         0.9;                               // font size adjustment when mt-med
+$mt-min-font-scale:         0.8;                               // font size adjustment when mt-min
+
+// --- COLORS ---
+
+$mt-color-bg:            	#ffffff;                           // background color
+$mt-color-fg:               #232323;					       // primary text color
+$mt-color-accent:           #3F859F;					       // secondary color
+
+$mt-color-bg-subtle:        #EEF6F6;
+$mt-color-fg-subtle:        #C2D6D6;
+
+$mt-color-script:           #AAAABB;					       // default color for script font
+$mt-color-code:           #3F859F;					       // default color for syntax font
+
+$mt-color-action:     		#e1602a;					       // links, buttons
+$mt-color-action-hover:  	lighten( $mt-color-action, 10% );
+$mt-color-action-active: 	darken( $mt-color-action,  10% );
+
+$mt-color-shadow:           rgba( $mt-color-fg, 0.33 );
+$mt-shadow-size-h:          0;
+$mt-shadow-size-v:          4px;
+$mt-shadow-blur:            3px;
