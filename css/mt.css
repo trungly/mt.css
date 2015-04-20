@@ -499,7 +499,7 @@ div, label, input, textarea, p, a, li, img, table {
 .mt-p, body, label, input, textarea {
   font-family: 'Roboto Slab', serif; }
 
-.mt-h3, h3, h3 a, .mt-h4, h4, h4 a {
+.mt-h3, h3, .mt-h4, h4 {
   color: #3F859F; }
 
 .mt-h1, h1, h1 a {
