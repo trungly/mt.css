@@ -41,6 +41,32 @@
     border-bottom-left-radius: 0;
 }
 
+
+// -- TABLES ---
+
+.mt-table {
+    border: 1px solid $mt-color-fg-subtle;
+    th, td {
+        padding: $mt-gutter/4 $mt-gutter/2;
+    }
+    th {
+        background-color: $mt-color-fg-subtle; color: $mt-color-bg;
+        border-right: 1px solid $mt-color-bg-subtle;;
+        &:last-of-type { border: none; }
+    }
+
+    tr:nth-child( even ) td {
+        background-color: $mt-color-bg-subtle;
+        border-right: 1px solid $mt-color-fg-subtle;
+        &:last-of-type { border: none; }
+    }
+    tr:nth-child( odd ) td {
+        border-right: 1px solid $mt-color-fg-subtle;
+        &:last-of-type { border: none; }
+    }
+}
+
+
 // -- HORIZONTAL RULES ---
 
 .mt-hr,

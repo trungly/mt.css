@@ -241,6 +241,26 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
+.mt-table {
+  border: 1px solid #C2D6D6; }
+  .mt-table th, .mt-table td {
+    padding: 7.2px 14.4px; }
+  .mt-table th {
+    background-color: #C2D6D6;
+    color: #ffffff;
+    border-right: 1px solid #EEF6F6; }
+    .mt-table th:last-of-type {
+      border: none; }
+  .mt-table tr:nth-child(even) td {
+    background-color: #EEF6F6;
+    border-right: 1px solid #C2D6D6; }
+    .mt-table tr:nth-child(even) td:last-of-type {
+      border: none; }
+  .mt-table tr:nth-child(odd) td {
+    border-right: 1px solid #C2D6D6; }
+    .mt-table tr:nth-child(odd) td:last-of-type {
+      border: none; }
+
 .mt-hr, .mt-hr-subtle {
   position: relative;
   margin: 43.2px 0 28.8px; }
